@@ -3,6 +3,8 @@
 # this script starts the ollama server and sends a pull command to it. 
 
 # Function to check if ollama serve is listening on port 8080
+echo "starting service"
+
 wait_for_ollama() {
   while ! nc -z localhost 8080; do 
     sleep 1  # Wait 1 second before checking again
